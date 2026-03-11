@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/config";
-import { trabajos, sesiones } from "@/data/content";
+import { trabajos } from "@/data/content";
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} | Fotografía y video aéreo en Buenos Aires`,

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Clientes",

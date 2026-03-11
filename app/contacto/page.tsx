@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import { siteConfig } from "@/lib/config";
 
 export default function ContactoPage() {
