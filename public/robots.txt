@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://skyspirit-drones.com.ar
+
+# Sitemaps
+Sitemap: https://skyspirit-drones.com.ar/sitemap.xml
