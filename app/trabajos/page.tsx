@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { trabajos } from "@/data/content";
+import MediaEmbed from "@/components/ui/MediaEmbed";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
 export default function TrabajosPage() {
   const inmobiliaria = trabajos.filter((t) => t.categoria === "inmobiliaria");
   const construccion = trabajos.filter((t) => t.categoria === "construccion");
+  const hoteleria = trabajos.filter((t) => t.categoria === "hoteleria");
 
   const renderCard = (t: (typeof trabajos)[0]) => (
     <article
@@ -24,15 +26,8 @@ export default function TrabajosPage() {
         scrollMarginTop: "80px",
       }}
     >
-      {t.videoUrl ? (
-        <div className="video-embed">
-          <iframe
-            src={t.videoUrl}
-            title={t.titulo}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+      {t.mediaUrl && t.mediaTipo && t.mediaTipo !== "none" ? (
+        <MediaEmbed url={t.mediaUrl} tipo={t.mediaTipo} titulo={t.titulo} />
       ) : (
         <div
           style={{
@@ -85,16 +80,18 @@ export default function TrabajosPage() {
       </div>
 
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "4rem 2rem" }}>
-        <section style={{ marginBottom: "5rem" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
-            <span style={{ fontSize: "1.5rem" }}>🏠</span>
-            <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Inmobiliarias</h2>
-            <div className="hr-sky" style={{ flex: 1 }} />
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
-            {inmobiliaria.map(renderCard)}
-          </div>
-        </section>
+        {inmobiliaria.length > 0 && (
+          <section style={{ marginBottom: "5rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
+              <span style={{ fontSize: "1.5rem" }}>🏠</span>
+              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Inmobiliarias</h2>
+              <div className="hr-sky" style={{ flex: 1 }} />
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
+              {inmobiliaria.map(renderCard)}
+            </div>
+          </section>
+        )}
 
         {construccion.length > 0 && (
           <section style={{ marginBottom: "5rem" }}>
@@ -105,6 +102,19 @@ export default function TrabajosPage() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
               {construccion.map(renderCard)}
+            </div>
+          </section>
+        )}
+
+        {hoteleria.length > 0 && (
+          <section style={{ marginBottom: "5rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
+              <span style={{ fontSize: "1.5rem" }}>🏨</span>
+              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Hotelería</h2>
+              <div className="hr-sky" style={{ flex: 1 }} />
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
+              {hoteleria.map(renderCard)}
             </div>
           </section>
         )}

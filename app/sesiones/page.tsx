@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { sesiones } from "@/data/content";
+import MediaEmbed from "@/components/ui/MediaEmbed";
 import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -50,15 +52,8 @@ export default function SesionesPage() {
                   overflow: "hidden",
                 }}
               >
-                {s.videoUrl ? (
-                  <div className="video-embed">
-                    <iframe
-                      src={s.videoUrl}
-                      title={s.titulo}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
+                {s.mediaUrl && s.mediaTipo && s.mediaTipo !== "none" ? (
+                  <MediaEmbed url={s.mediaUrl} tipo={s.mediaTipo} titulo={s.titulo} />
                 ) : (
                   <div
                     style={{
