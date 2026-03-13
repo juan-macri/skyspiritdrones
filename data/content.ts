@@ -97,35 +97,51 @@ export const categorias = [
 
 export const faqItems = [
   {
-    pregunta: "¿En qué zonas de Buenos Aires operás?",
-    respuesta: "Opero principalmente en CABA y Gran Buenos Aires (norte, sur, oeste). Para zonas más alejadas como la Costa Atlántica o el interior de la provincia, consultame — dependiendo del proyecto puedo trasladarme.",
+    pregunta: "¿Por qué usar tomas con dron para una propiedad o proyecto?",
+    respuesta: "Las tomas aéreas permiten mostrar el entorno, la escala y la ubicación de un lugar de forma clara e impactante. Esto mejora la presentación del proyecto y ayuda a destacarlo frente a otras publicaciones.",
   },
   {
-    pregunta: "¿Qué tipo de dron usás?",
-    respuesta: "Trabajo con drones DJI de la serie Pro, con cámara estabilizada en cardán de 3 ejes. Grabo en 4K a 60fps con capacidad de tomas en RAW para edición profesional.",
+    pregunta: "¿Qué tipo de trabajos realizás?",
+    respuesta: "Realizo filmaciones y fotografías aéreas con dron para proyectos inmobiliarios, desarrollos urbanos, turismo, hotelería y contenido promocional para redes sociales. El objetivo es mostrar espacios, entorno y escala desde perspectivas que no se logran desde tierra.",
   },
   {
-    pregunta: "¿Cuánto tiempo lleva una sesión de fotos/video?",
-    respuesta: "Una sesión estándar para inmobiliaria dura entre 1 y 2 horas en locación. Las fotos editadas se entregan en 48hs hábiles, y los videos en 5 a 7 días hábiles.",
+    pregunta: "¿En qué zonas trabajás?",
+    respuesta: "Trabajo principalmente en Capital Federal y en la provincia de Buenos Aires. También puedo desplazarme a otras localidades si el proyecto lo requiere.",
   },
   {
-    pregunta: "¿Qué necesito tener en cuenta para la sesión?",
-    respuesta: "El dron necesita espacio abierto para despegar y aterrizar. Para propiedades, lo ideal es una mañana despejada (menos viento) y que la propiedad esté ordenada. Coordino el día y horario en función de la luz solar.",
+    pregunta: "¿El servicio incluye edición del material?",
+    respuesta: "Podés elegir entre recibir el material en crudo o solicitar la edición de un video final listo para publicar en redes sociales o sitios institucionales.",
   },
   {
-    pregunta: "¿Trabajás con inmobiliarias que necesitan fotos periódicas?",
-    respuesta: "Sí, ofrezco tarifas especiales para inmobiliarias con volumen de trabajo recurrente. Si manejás varias propiedades por mes, hablemos de un acuerdo a medida.",
+    pregunta: "¿Cuánto dura una sesión y cuándo se entrega el material?",
+    respuesta: "Una sesión estándar para inmobiliarias dura entre 1 y 2 horas en locación. Las fotos se entregan dentro de las 72 horas hábiles y los videos editados entre 5 y 7 días hábiles.",
   },
   {
-    pregunta: "¿Hacés seguimiento fotográfico de obras?",
-    respuesta: "Sí. El seguimiento de obra es uno de los servicios más solicitados. Coordino visitas periódicas (semanal, quincenal o mensual) para documentar el avance desde el aire, con informes fotográficos organizados.",
+    pregunta: "¿Cuánto cuesta una filmación con dron?",
+    respuesta: "El costo depende del tipo de proyecto, el material a entregar (tomas en crudo, fotos o video editado) y la contratación de sesiones o paquetes. Contactame con los detalles y te envío una propuesta acorde a lo que necesitás.",
   },
   {
-    pregunta: "¿Cómo es el proceso para contratar una sesión?",
-    respuesta: "Escribime por WhatsApp o email con los detalles del proyecto (ubicación, tipo de propiedad, qué necesitás). Te respondo con una propuesta y si acordamos, coordinamos fecha y horario. Simple.",
+    pregunta: "¿Qué pasa si hay mal clima?",
+    respuesta: "El viento fuerte, la lluvia u otras condiciones climáticas adversas pueden afectar la seguridad del vuelo y la calidad de las tomas. En esos casos, la sesión se reprograma sin costo adicional.",
+  },
+  {
+    pregunta: "¿Se puede volar en cualquier lugar?",
+    respuesta: "No siempre. Algunas zonas tienen restricciones, como áreas cercanas a aeropuertos o espacios con limitaciones específicas. Antes de cada trabajo evalúo la viabilidad del vuelo.",
+  },
+  {
+    pregunta: "¿Trabajás con inmobiliarias que necesitan contenido de forma periódica?",
+    respuesta: "Sí. Ofrezco tarifas especiales para inmobiliarias con volumen de trabajo recurrente. Si manejás varias propiedades por mes, podemos coordinar un acuerdo a medida.",
+  },
+  {
+    pregunta: "¿Realizás seguimiento fotográfico de obras?",
+    respuesta: "Sí. El seguimiento de obra es uno de los servicios más solicitados. Coordino visitas periódicas (semanales, quincenales o mensuales) para documentar el avance desde el aire con registros fotográficos organizados.",
   },
   {
     pregunta: "¿Los archivos tienen marca de agua?",
-    respuesta: "No. Una vez confirmado el trabajo y realizado el pago, entrego los archivos finales sin marca de agua para uso comercial.",
+    respuesta: "No. Una vez confirmado el trabajo y realizado el pago, entrego los archivos finales sin marca de agua para su uso comercial.",
   },
+  {
+    pregunta: "¿Cómo es el proceso para contratar una sesión?",
+    respuesta: "Podés escribirme por WhatsApp o email con los detalles del proyecto (ubicación, tipo de propiedad y material necesario). Te envío una propuesta y, si avanzamos, coordinamos fecha y horario.",
+  }
 ];
