@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Fotografía y video aéreo profesional en Buenos Aires",
   description:
     "Piloto de dron profesional en Buenos Aires. Fotografía y video aéreo para inmobiliarias, constructoras y proyectos especiales. Capturas en 4K, entregas rápidas.",
-  url: "https://skyspirit-drones.com.ar", // Cambiar por dominio real
+  url: "https://skyspiritdrones.com.ar",
   email: "sky.spirit.drones@gmail.com",
   whatsapp: "+5491161053449",
   whatsappMessage: "Hola! Quisiera consultar sobre una sesión de fotografía aérea.",
