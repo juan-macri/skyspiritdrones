@@ -8,19 +8,19 @@ export const metadata: Metadata = {
 
 const equipo = [
   {
-    nombre: "DJI Mini 4 Pro / Air 3",
-    descripcion: "Resolución 4K, cámara estabilizada en cardán de 3 ejes, RAW y log color. Ideal para propiedades y obras.",
+    nombre: "DJI Mini 4 Pro",
+    descripcion: "Drone de menos de 250g que no requiere registro, con cámara de 1/1.3\" a 4K/60fps, cardán de 3 ejes, grabación en D-Log M y apertura f/1.7. Ideal para propiedades, desarrollos y proyectos turísticos donde la calidad de imagen es clave.",
     icon: "🚁",
   },
   {
-    nombre: "Edición 4K",
-    descripcion: "Post-producción en DaVinci Resolve. Entrega en formatos optimizados para web, redes y publicidad.",
+    nombre: "Adobe Premiere Pro",
+    descripcion: "Edición profesional en Premiere Pro con corrección de color avanzada. Entrega en formatos optimizados para portales inmobiliarios, redes sociales y presentaciones corporativas.",
     icon: "🎬",
   },
   {
-    nombre: "Golden hour",
-    descripcion: "Coordinación de vuelos en función de la luz natural para resultados cinematográficos.",
-    icon: "🌅",
+    nombre: "Adobe After Effects",
+    descripcion: "Composición y motion graphics para agregar títulos, logos, textos animados y efectos visuales que elevan el nivel de presentación del producto final.",
+    icon: "✨",
   },
 ];
 
@@ -40,24 +40,17 @@ export default function SobreMiPage() {
         <section style={{ marginBottom: "5rem" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "5rem", alignItems: "start" }}>
             <div>
-              {/* Placeholder foto - reemplazar con foto real */}
-              <div
+              <img
+                src="/foto-piloto.jpg"
+                alt="Piloto de drone en Buenos Aires"
                 style={{
                   width: "100%",
+                  height: "auto",
                   aspectRatio: "4/5",
-                  background: "linear-gradient(135deg, #0F2236, #1B3A5C, #2E6DA4)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  objectFit: "cover",
                   border: "1px solid rgba(123,196,226,0.1)",
-                  fontSize: "5rem",
                 }}
-              >
-                👤
-              </div>
-              <p style={{ color: "rgba(232,239,245,0.3)", fontSize: "0.75rem", textAlign: "center", marginTop: "0.75rem" }}>
-                Reemplazá este bloque con tu foto en <code style={{ color: "#7BC4E2" }}>public/foto-piloto.jpg</code>
-              </p>
+              />
             </div>
 
             <div style={{ paddingTop: "1rem" }}>
@@ -66,17 +59,20 @@ export default function SobreMiPage() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "rgba(232,239,245,0.65)", fontSize: "1rem", lineHeight: 1.8 }}>
                 <p>
-                  Empecé a volar por curiosidad y me quedé por lo que se puede ver desde arriba. Hay algo en la perspectiva aérea — la escala, los patrones, la luz — que ninguna cámara en tierra puede replicar.
+                  Soy piloto de drone y realizador audiovisual especializado en producción aérea para inmobiliarias, arquitectura y proyectos turísticos. Trabajo con un enfoque cinematográfico, buscando que cada toma no solo muestre un lugar, sino que comunique su escala, su entorno y su valor.
                 </p>
                 <p>
-                  Trabajé con inmobiliarias y constructoras de Buenos Aires, capturando propiedades, obras y espacios con el objetivo de que las imágenes vendan antes de la visita y documenten mejor que cualquier informe escrito.
+                  Mi objetivo es crear imágenes que ayuden a destacar propiedades y desarrollos en un mercado cada vez más visual. Cada proyecto lo abordo con planificación, control técnico de imagen y un proceso de edición profesional, cuidando especialmente el movimiento de cámara, la composición y el color para lograr un resultado limpio y de alto impacto.
                 </p>
                 <p>
-                  También vuelo por las rutas, el Delta, la costa — lugares donde la única razón para subir el dron es capturar algo que vale la pena guardar.
+                  Actualmente colaboro con inmobiliarias y constructoras que buscan elevar la presentación de sus propiedades y diferenciarse visualmente en redes sociales, portales y campañas de marketing.
+                </p>
+                <p>
+                  SkySpirit Drones nace de la combinación entre tecnología aérea, narrativa visual y una búsqueda constante de calidad en cada producción.
                 </p>
               </div>
 
-              <div style={{ marginTop: "2.5rem", display: "flex", gap: "3rem" }}>
+              {/* <div style={{ marginTop: "2.5rem", display: "flex", gap: "3rem" }}>
                 {[
                   { numero: "30+", label: "Proyectos" },
                   { numero: "15+", label: "Clientes" },
@@ -91,7 +87,7 @@ export default function SobreMiPage() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 
