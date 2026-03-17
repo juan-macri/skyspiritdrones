@@ -181,6 +181,17 @@ export const sesiones: Sesion[] = [
     fecha: "2025-09",
     tags: ["hyperlapse", "villa bosch", "tres de febrero", "gran buenos aires", "atardecer", "bosque eucaliptos", "estacion tren", "paisaje urbano", "drone gba"],
   },
+  {
+    id: "estacion-villa-bosch-recuperacion",
+    titulo: "Recuperación de la Estación Villa Bosch",
+    ubicacion: "Villa Bosch, Tres de Febrero, Buenos Aires",
+    descripcion: "Reel del anuncio de la recuperación de la Estación Villa Bosch por el Intendente de Tres de Febrero. Un momento histórico para el barrio capturado desde el aire.",
+    mediaUrl: "https://www.instagram.com/reel/DNQ-IahOGzP/",
+    mediaTipo: "instagram",
+    thumbnail: "/images/placeholder-landscape.jpg",
+    fecha: "2025-06",
+    tags: ["villa bosch", "tres de febrero", "estacion villa bosch", "recuperacion", "intendente", "evento", "drone gba", "historia local"],
+  },
 ];
 
 export const categorias = [

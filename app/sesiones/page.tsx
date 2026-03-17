@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Sesiones",
-  description: `Videos y fotografía aérea de paisajes y viajes por Argentina. Capturas personales con dron. ${siteConfig.name}, Buenos Aires.`,
+  description: `Videos y fotografía aérea de paisajes, monumentos y ventos. Capturas personales con dron. ${siteConfig.name}.`,
 };
 
 export default function SesionesPage() {
@@ -28,7 +28,7 @@ export default function SesionesPage() {
             Sesiones
           </h1>
           <p style={{ color: "rgba(232,239,245,0.5)", fontSize: "1.05rem", maxWidth: "560px", lineHeight: 1.7 }}>
-            Vuelos personales por paisajes y lugares de Argentina. Sin cliente, sin encargo — solo el dron, la luz y el lugar.
+            Sin cliente, sin encargo — solo el dron, la luz y el lugar.
           </p>
         </div>
       </div>
