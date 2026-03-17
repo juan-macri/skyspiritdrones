@@ -15,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
+      {/* HERO */}
       <section
         style={{
           minHeight: "100vh",
@@ -26,9 +27,37 @@ export default function HomePage() {
           padding: "8rem 2rem 4rem",
           position: "relative",
           overflow: "hidden",
-          background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(46,109,164,0.18) 0%, transparent 70%), #0A0F14",
         }}
       >
+        {/* Video de fondo */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            zIndex: 0,
+            opacity: 0.45,
+          }}
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay degradado para legibilidad */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(to bottom, rgba(10,15,20,0.5) 0%, rgba(10,15,20,0.2) 50%, rgba(10,15,20,0.8) 100%)",
+            zIndex: 1,
+          }}
+        />
+
         {/* Background grid */}
         <div
           style={{
@@ -38,15 +67,17 @@ export default function HomePage() {
               "linear-gradient(rgba(123,196,226,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(123,196,226,0.03) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
             pointerEvents: "none",
+            zIndex: 2,
           }}
         />
 
         {/* Floating logo */}
-        <div className="animate-drone-float" style={{ marginBottom: "2rem", position: "relative", zIndex: 1 }}>
+        <div className="animate-drone-float" style={{ marginBottom: "2rem", position: "relative", zIndex: 3 }}>
           <Image src="/logo.png" alt="SkySpirit Drones" width={110} height={110} style={{ objectFit: "contain", filter: "drop-shadow(0 0 40px rgba(123,196,226,0.3))" }} />
         </div>
 
-        <div className="animate-fade-up" style={{ position: "relative", zIndex: 1 }}>
+        {/* Texto */}
+        <div className="animate-fade-up" style={{ position: "relative", zIndex: 3 }}>
           <p style={{ color: "#7BC4E2", fontSize: "0.78rem", letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
             Buenos Aires · Argentina
           </p>
@@ -68,7 +99,7 @@ export default function HomePage() {
           </h1>
           <p
             style={{
-              color: "rgba(232,239,245,0.55)",
+              color: "rgba(232,239,245,0.75)",
               fontSize: "clamp(1rem, 2vw, 1.2rem)",
               fontWeight: 300,
               maxWidth: "480px",
@@ -127,6 +158,7 @@ export default function HomePage() {
             alignItems: "center",
             gap: "0.5rem",
             opacity: 0.4,
+            zIndex: 3,
           }}
         >
           <span style={{ fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#7BC4E2" }}>Scroll</span>
