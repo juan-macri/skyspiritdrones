@@ -1,4 +1,4 @@
-export type Categoria = "inmobiliaria" | "construccion" | "paisajes" | "hoteleria";
+export type Categoria = "inmobiliaria" | "construccion" | "paisajes" | "hoteleria" | "evento";
 export type MediaTipo = "youtube" | "vimeo" | "instagram" | "none";
 
 export interface Trabajo {
@@ -155,6 +155,20 @@ export const trabajos: Trabajo[] = [
     thumbnail: "/images/placeholder-property.jpg",
     fecha: "2021-12",
     tags: ["hotel huinid", "bariloche", "patagonia", "nahuel huapi", "cordillera", "video aereo hotel", "rio negro", "turismo bariloche", "drone patagonia"],
+  },
+  {
+    id: "inauguracion-saturna-villa-bosch",
+    titulo: "Inauguración de nuevo local de Saturna",
+    cliente: "Saturna",
+    ubicacion: "Villa Bosch, Buenos Aires",
+    categoria: "evento",
+    descripcion: "Cobertura aérea de la inauguración del nuevo local de Saturna en Villa Bosch. Capturas del evento desde el aire que destacan la arquitectura del local y la energía del día de apertura.",
+    destacado: false,
+    mediaUrl: "https://www.instagram.com/p/DW5TZS8kSpP/?next=&hl=es",
+    mediaTipo: "instagram",
+    thumbnail: "/images/placeholder-property.jpg",
+    fecha: "2026-04",
+    tags: ["evento", "inauguracion", "saturna", "villa bosch", "buenos aires", "drone evento", "apertura local"],
   },
 ];
 

@@ -13,6 +13,7 @@ export default function TrabajosPage() {
   const inmobiliaria = trabajos.filter((t) => t.categoria === "inmobiliaria");
   const construccion = trabajos.filter((t) => t.categoria === "construccion");
   const hoteleria = trabajos.filter((t) => t.categoria === "hoteleria");
+  const evento = trabajos.filter((t) => t.categoria === "evento");
 
   const renderCard = (t: (typeof trabajos)[0]) => (
     <article
@@ -39,13 +40,13 @@ export default function TrabajosPage() {
             fontSize: "3.5rem",
           }}
         >
-          {t.categoria === "inmobiliaria" ? "🏠" : "🏗️"}
+          {t.categoria === "inmobiliaria" ? "🏠" : t.categoria === "evento" ? "🎉" : "🏗️"}
         </div>
       )}
       <div style={{ padding: "1.75rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
           <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7BC4E2" }}>
-            {t.categoria === "inmobiliaria" ? "Inmobiliaria" : "Construcción"}
+            {t.categoria === "inmobiliaria" ? "Inmobiliaria" : t.categoria === "construccion" ? "Construcción" : t.categoria === "hoteleria" ? "Hotelería" : t.categoria === "evento" ? "Evento" : t.categoria}
           </span>
           <span style={{ fontSize: "0.75rem", color: "rgba(232,239,245,0.3)" }}>
             {new Date(t.fecha + "-01").toLocaleDateString("es-AR", { month: "long", year: "numeric" })}
@@ -115,6 +116,19 @@ export default function TrabajosPage() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
               {hoteleria.map(renderCard)}
+            </div>
+          </section>
+        )}
+
+        {evento.length > 0 && (
+          <section style={{ marginBottom: "5rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
+              <span style={{ fontSize: "1.5rem" }}>🎉</span>
+              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Eventos</h2>
+              <div className="hr-sky" style={{ flex: 1 }} />
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
+              {evento.map(renderCard)}
             </div>
           </section>
         )}
