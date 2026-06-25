@@ -8,6 +8,8 @@ export const siteConfig = {
   whatsapp: "+5491161053449",
   whatsappMessage: "Hola! Quisiera consultar sobre una sesión de fotografía aérea.",
   instagram: "skyspiritdrones",
+  twitter: "skyspiritdrones",
+  kovac: "https://kovac.com.ar",
   ubicacion: "Buenos Aires, Argentina",
   keywords: [
     "fotografía aérea Buenos Aires",
