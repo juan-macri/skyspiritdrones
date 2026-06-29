@@ -30,6 +30,21 @@ export interface Sesion {
 
 export const trabajos: Trabajo[] = [
   {
+    id: "edificio-lomas-bosch-villa-bosch",
+    titulo: "Lomas Bosch",
+    cliente: "Inmobiliaria Paola Montelongo",
+    ubicacion: "Villa Bosch, Tres de Febrero, Buenos Aires",
+    categoria: "construccion",
+    descripcion: "Reel con tomas aéreas del Edificio Lomas Bosch en Villa Bosch para Inmobiliaria Paola Montelongo. Capturas del edificio en construcción y su entorno en el partido de Tres de Febrero.",
+    destacado: false,
+    mediaUrl: "https://www.instagram.com/reels/DaEEEbAiHFd/",
+    mediaTipo: "instagram",
+    thumbnail: "/images/placeholder-property.jpg",
+    fecha: "2026-06",
+    tags: ["lomas bosch", "villa bosch", "tres de febrero", "inmobiliaria", "paola montelongo", "gran buenos aires", "reel inmobiliario", "drone gba"],
+  },
+
+  {
     id: "propiedad-ciudad-jardin-map",
     titulo: "Propiedad en Ciudad Jardín",
     cliente: "Inmobiliaria MAP",
