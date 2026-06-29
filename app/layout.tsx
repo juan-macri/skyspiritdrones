@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <WhatsAppFloat />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
