@@ -30,6 +30,21 @@ export interface Sesion {
 
 export const trabajos: Trabajo[] = [
   {
+    id: "instituto-ingles-villa-bosch",
+    titulo: "Instituto de Inglés Villa Bosch",
+    cliente: "Instituto de Inglés Villa Bosch",
+    ubicacion: "Villa Bosch, Tres de Febrero, Buenos Aires",
+    categoria: "evento",
+    descripcion: "Reel de filmación y edición para el Instituto de Inglés Villa Bosch. Capturas del espacio, sus aulas e instalaciones en el partido de Tres de Febrero.",
+    destacado: false,
+    mediaUrl: "https://www.instagram.com/p/DXjhxtlEazM/",
+    mediaTipo: "instagram",
+    thumbnail: "/images/placeholder-property.jpg",
+    fecha: "2026-04",
+    tags: ["instituto de ingles", "villa bosch", "tres de febrero", "gran buenos aires", "video institucional", "filmacion comercial", "drone gba"],
+  },
+
+  {
     id: "edificio-lomas-bosch-villa-bosch",
     titulo: "Lomas Bosch",
     cliente: "Inmobiliaria Paola Montelongo",
