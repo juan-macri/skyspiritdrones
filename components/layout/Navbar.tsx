@@ -156,11 +156,11 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="kovac.com.ar"
-              style={{ opacity: 0.55, transition: "opacity 0.2s", display: "flex" }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.55")}
+              style={{ color: "rgba(232,239,245,0.5)", transition: "color 0.2s", display: "flex", alignItems: "center" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#E8EFF5")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(232,239,245,0.5)")}
             >
-              <Image src="/kovac-icon.png" alt="kovac.com.ar" width={22} height={22} />
+              <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: "1.2rem", lineHeight: 1, letterSpacing: "-0.02em", display: "flex", alignItems: "center" }}>K</span>
             </a>
           </li>
         </ul>
@@ -258,9 +258,9 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="kovac.com.ar"
-                style={{ opacity: 0.55, display: "flex" }}
+                style={{ color: "rgba(232,239,245,0.5)", display: "flex", alignItems: "center" }}
               >
-                <Image src="/kovac-icon.png" alt="kovac.com.ar" width={22} height={22} />
+                <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: "1.2rem", lineHeight: 1, letterSpacing: "-0.02em", display: "flex", alignItems: "center" }}>K</span>
               </a>
             </li>
           </ul>
