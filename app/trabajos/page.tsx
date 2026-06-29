@@ -9,11 +9,16 @@ export const metadata: Metadata = {
   description: `Portfolio de fotografía y video aéreo con dron en Buenos Aires. Proyectos para inmobiliarias y constructoras. ${siteConfig.name}.`,
 };
 
+const categoriaBadge: Record<string, { label: string; emoji: string; color: string }> = {
+  inmobiliaria: { label: "Inmobiliaria", emoji: "🏠", color: "123,196,226" },
+  construccion: { label: "Construcción", emoji: "🏗️", color: "251,191,36" },
+  hoteleria:    { label: "Hotelería",    emoji: "🏨", color: "52,211,153" },
+  evento:       { label: "Evento",       emoji: "🎉", color: "167,139,250" },
+  paisajes:     { label: "Paisajes",     emoji: "🌅", color: "134,239,172" },
+};
+
 export default function TrabajosPage() {
-  const inmobiliaria = trabajos.filter((t) => t.categoria === "inmobiliaria");
-  const construccion = trabajos.filter((t) => t.categoria === "construccion");
-  const hoteleria = trabajos.filter((t) => t.categoria === "hoteleria");
-  const evento = trabajos.filter((t) => t.categoria === "evento");
+  const sorted = [...trabajos].sort((a, b) => b.fecha.localeCompare(a.fecha));
 
   const renderCard = (t: (typeof trabajos)[0]) => (
     <article
@@ -45,9 +50,14 @@ export default function TrabajosPage() {
       )}
       <div style={{ padding: "1.75rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
-          <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7BC4E2" }}>
-            {t.categoria === "inmobiliaria" ? "Inmobiliaria" : t.categoria === "construccion" ? "Construcción" : t.categoria === "hoteleria" ? "Hotelería" : t.categoria === "evento" ? "Evento" : t.categoria}
-          </span>
+          {(() => {
+            const b = categoriaBadge[t.categoria] ?? { label: t.categoria, emoji: "", color: "123,196,226" };
+            return (
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", padding: "0.2rem 0.6rem", background: `rgba(${b.color},0.12)`, border: `1px solid rgba(${b.color},0.3)`, color: `rgb(${b.color})`, fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                <span>{b.emoji}</span>{b.label}
+              </span>
+            );
+          })()}
           <span style={{ fontSize: "0.75rem", color: "rgba(232,239,245,0.3)" }}>
             {new Date(t.fecha + "-01").toLocaleDateString("es-AR", { month: "long", year: "numeric" })}
           </span>
@@ -81,57 +91,9 @@ export default function TrabajosPage() {
       </div>
 
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "4rem 2rem" }}>
-        {inmobiliaria.length > 0 && (
-          <section style={{ marginBottom: "5rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
-              <span style={{ fontSize: "1.5rem" }}>🏠</span>
-              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Inmobiliarias</h2>
-              <div className="hr-sky" style={{ flex: 1 }} />
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
-              {inmobiliaria.map(renderCard)}
-            </div>
-          </section>
-        )}
-
-        {construccion.length > 0 && (
-          <section style={{ marginBottom: "5rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
-              <span style={{ fontSize: "1.5rem" }}>🏗️</span>
-              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Construcción</h2>
-              <div className="hr-sky" style={{ flex: 1 }} />
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
-              {construccion.map(renderCard)}
-            </div>
-          </section>
-        )}
-
-        {hoteleria.length > 0 && (
-          <section style={{ marginBottom: "5rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
-              <span style={{ fontSize: "1.5rem" }}>🏨</span>
-              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Hotelería</h2>
-              <div className="hr-sky" style={{ flex: 1 }} />
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
-              {hoteleria.map(renderCard)}
-            </div>
-          </section>
-        )}
-
-        {evento.length > 0 && (
-          <section style={{ marginBottom: "5rem" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "2.5rem" }}>
-              <span style={{ fontSize: "1.5rem" }}>🎉</span>
-              <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "2rem", fontWeight: 300, color: "#E8EFF5" }}>Eventos</h2>
-              <div className="hr-sky" style={{ flex: 1 }} />
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem" }}>
-              {evento.map(renderCard)}
-            </div>
-          </section>
-        )}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "1.5rem", marginBottom: "4rem" }}>
+          {sorted.map(renderCard)}
+        </div>
 
         <div style={{ padding: "3rem", background: "linear-gradient(135deg, #0E1820, #0F2236)", border: "1px solid rgba(123,196,226,0.1)", textAlign: "center" }}>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontSize: "1.5rem", color: "#E8EFF5", marginBottom: "1rem" }}>¿Querés sumar tu propiedad u obra?</p>

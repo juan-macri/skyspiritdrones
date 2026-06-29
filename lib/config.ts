@@ -28,7 +28,6 @@ export const siteConfig = {
 export const navLinks = [
   { href: "/trabajos", label: "Trabajos" },
   { href: "/sesiones", label: "Sesiones" },
-  { href: "/clientes", label: "Clientes" },
   { href: "/sobre-mi", label: "Sobre mí" },
   { href: "/faq", label: "FAQ" },
   { href: "/contacto", label: "Contacto" },
