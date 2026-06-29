@@ -99,6 +99,18 @@ export default function ContactoPage() {
                   @{siteConfig.instagram}
                 </a>
               </div>
+
+              <div>
+                <p style={{ color: "#7BC4E2", fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "0.4rem" }}>X (Twitter)</p>
+                <a
+                  href={`https://x.com/${siteConfig.twitter}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "rgba(232,239,245,0.65)", textDecoration: "none", fontSize: "0.95rem" }}
+                >
+                  @{siteConfig.twitter}
+                </a>
+              </div>
             </div>
 
             {/* Quick WhatsApp */}

@@ -30,5 +30,4 @@ export const navLinks = [
   { href: "/sesiones", label: "Sesiones" },
   { href: "/sobre-mi", label: "Sobre mí" },
   { href: "/faq", label: "FAQ" },
-  { href: "/contacto", label: "Contacto" },
 ];
